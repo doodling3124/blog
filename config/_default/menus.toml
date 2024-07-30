@@ -1,0 +1,46 @@
+# config/_default/menus.toml
+
+[[main]]
+  name = "博客"
+  pageRef = "blogs"
+  weight = 10
+
+[[main]]
+  name = "归档"
+  pageRef = "Archive"
+  weight = 20
+
+[[footer]]
+  # name = "Privacy"
+  # url = "https://external-link"
+
+
+# [[main]]
+#   name = "sub-menu 1"
+#   parent = "Archive"
+#   pageRef = "samples"
+#   weight = 20
+
+# [[main]]
+#   name = "sub-menu 2"
+#   parent = "Archive"
+#   pageRef = "samples"
+#   weight = 20
+
+# [[main]]
+#   name = "sub-menu 3"
+#   parent = "Archive"
+#   pre = "github"
+#   pageRef = "samples"
+#   weight = 20
+
+
+# [[subnavigation]]
+#   name = "An interesting topic"
+#   pageRef = "tags/interesting-topic"
+#   weight = 10
+
+# [[subnavigation]]
+#   name = "My Awesome Category"
+#   pageRef = "categories/awesome"
+#   weight = 20
