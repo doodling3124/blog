@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on Pigking的博客</title>
+    <title>博客 on Pigking的博客</title>
     <link>//localhost:1313/blogs/</link>
-    <description>Recent content in Blogs on Pigking的博客</description>
+    <description>Recent content in 博客 on Pigking的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hans</language>
+    <language>zh-CN</language>
     <copyright>© 2024 Pigking</copyright>
-    <lastBuildDate>Fri, 26 Jul 2024 21:53:39 +0800</lastBuildDate><atom:link href="//localhost:1313/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Jul 2024 13:01:57 +0800</lastBuildDate><atom:link href="//localhost:1313/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一元线性回归</title>
       <link>//localhost:1313/blogs/%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</link>
       <pubDate>Fri, 26 Jul 2024 21:53:39 +0800</pubDate>
       
       <guid>//localhost:1313/blogs/%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</guid>
-      <description>回归函数:$$f_{w,b}(x) = wx + b$$ 代价函数:$$J(w,b) = \frac{1}{2m}\sum_{i=1}^m(f_{w,b}(x_i)-y_i)^2$$ 梯度下降法同时更新w和b:</description>
-      
+      <description>回归函数: $$f_{w,b}(x) = wx + b$$ 代价函数: $$J(w,b) = \frac{1}{2m}\sum_{i=1}^m(f_{w,b}(x_i)-y_i)^2$$ 梯度下降法同时更新w和b</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/blogs/%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/feature.jpg" />
     </item>
     
   </channel>

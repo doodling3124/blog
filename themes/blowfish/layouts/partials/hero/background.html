@@ -32,17 +32,17 @@
 {{- with $featured -}}
 
 {{ if $shouldAddHeaderSpace | default true}}
-<div id="hero" class="h-[150px] md:h-[200px]"></div>
+<div id="hero" class="h-[50px] md:h-[100px]" style="margin-top: 100px;"></div>
 {{ end }}
 
 {{ if or $disableImageOptimization (strings.HasSuffix $featured ".svg")}}
     {{ with . }}
-    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    <div class="fixed inset-x-0 top-0 h-[1000px] single_hero_background nozoom"
     style="background-image:url({{ .RelPermalink }});">
     {{ end }}
 {{ else }}
     {{ with .Resize "1200x" }}
-    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    <div class="fixed inset-x-0 top-0 h-[1000px] single_hero_background nozoom"
     style="background-image:url({{ .RelPermalink }});">
     {{ end }}
 {{ end }}

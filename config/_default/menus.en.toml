@@ -1,4 +1,14 @@
 # -- Main Menu --
+[[main]]
+  name = "Blogs"
+  pageRef = "blogs"
+  weight = 10
+
+[[main]]
+  name = "Archive"
+  pageRef = "Archive"
+  weight = 20
+
 # The main menu is displayed in the header at the top of the page.
 # Acceptable parameters are name, pageRef, page, url, title, weight.
 # 

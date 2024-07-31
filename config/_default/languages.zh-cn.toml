@@ -1,5 +1,5 @@
-languageCode = "zh-Hans"
-languageName = "Chinese"
+languageCode = "zh-CN"
+languageName = "简体中文"
 weight = 1
 title = "Pigking的博客"
 
@@ -8,16 +8,16 @@ title = "Pigking的博客"
 name = "Pigking"
 image = "img/avatar.jpg"
 headline = ""
-bio = "A little bit about me"
+bio = ""
 links = [
   { github = "https://github.com/doodling3124" }
 ]
 
 [params]
-  displayName = "zh-Hans"
-  isoCode = "cn"
+  displayName = "简体中文"
+  isoCode = "zh-CN"
   rtl = false
-  dateFormat = "2 January 2006"
+  dateFormat = "2006年1月2日"
   # logo = "img/avatar.jpg"
   # secondaryLogo = "img/secondary-logo.png"
   # description = "My awesome website"

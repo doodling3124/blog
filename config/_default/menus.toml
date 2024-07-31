@@ -10,7 +10,7 @@
   pageRef = "Archive"
   weight = 20
 
-[[footer]]
+  # [[footer]]
   # name = "Privacy"
   # url = "https://external-link"
 

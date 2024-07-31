@@ -146,4 +146,8 @@
   </script>
   {{ end }}
   {{ end }}
+  <!-- 启用数学公式 -->
+  {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+  {{ end }}
 </head>

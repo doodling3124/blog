@@ -1,10 +1,19 @@
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Blowfish"
+title = "Pigking'Blog"
+
+[author]
+name = "Pigking"
+image = "img/avatar.jpg"
+headline = ""
+bio = ""
+links = [
+  { github = "https://github.com/doodling3124" }
+]
 
 [params]
-  displayName = "EN"
+  displayName = "English"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"

@@ -4,13 +4,14 @@
 
 theme = "blowfish" # UNCOMMENT THIS LINE
 # baseURL = "https://your_domain.com/"
-defaultContentLanguage = "cn"
+defaultContentLanguage = "zh-CN"
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
 enableRobotsTXT = true
 paginate = 10
-summaryLength = 0
+summaryLength = 30
+hasCJKLanguage = true
 
 buildDrafts = false
 buildFuture = false
