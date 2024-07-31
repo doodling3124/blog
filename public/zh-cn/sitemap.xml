@@ -7,6 +7,16 @@
     <lastmod>2024-07-31T13:01:57+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="//localhost:1313/en/blogs/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-CN"
+      href="//localhost:1313/blogs/"
+    />
   </url>
   <url>
     <loc>//localhost:1313/</loc>
