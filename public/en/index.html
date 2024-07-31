@@ -163,8 +163,10 @@
     class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
     
 
-    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+
+    
+    <script src="APlayer/APlayer.min.js"></script>
+    <link rel="stylesheet" href="APlayer/APlayer.min.css">
     <div id="aplayer"></div>
     <script>
         const ap = new APlayer({
@@ -176,6 +178,22 @@
                 url: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722336638493/01 - Florence.mp3', 
                 cover: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722337229573/Florence.png'
             },]
+        });
+    </script>
+
+    
+
+    
+    <link rel="stylesheet" type="text/css" href="live2d/waifu.css">
+    <script type="text/javascript" src="live2d/live2d.min.js"></script>
+    <script type="text/javascript" src="live2d/waifu-tips.js"></script>
+    <script>
+        
+        initWidget({
+            waifuPath: "live2d/waifu-tips.json",
+            
+            cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
+            tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
         });
     </script>
 
@@ -608,6 +626,7 @@
       href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
     </p>
     
+
 
   </div>
   <script>

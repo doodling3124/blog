@@ -15,11 +15,11 @@
   # url = "https://external-link"
 
 
-# [[main]]
-#   name = "sub-menu 1"
-#   parent = "Archive"
-#   pageRef = "samples"
-#   weight = 20
+[[main]]
+  name = "标签"
+  parent = "归档"
+  pageRef = "tags"
+  weight = 20
 
 # [[main]]
 #   name = "sub-menu 2"
