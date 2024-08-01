@@ -10,6 +10,13 @@
   pageRef = "Archive"
   weight = 20
 
+[[main]]
+  name = "RSS"
+  pageRef = ""
+  pre = "rss"
+  weight = 30
+  url = "/index.xml"
+
   # [[footer]]
   # name = "Privacy"
   # url = "https://external-link"
@@ -26,7 +33,7 @@
 #   parent = "Archive"
 #   pageRef = "samples"
 #   weight = 20
-
+ 
 # [[main]]
 #   name = "sub-menu 3"
 #   parent = "Archive"
