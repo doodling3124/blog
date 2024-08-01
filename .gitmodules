@@ -4,4 +4,4 @@
 	branch = main
 [submodule "static/live2d"]
 	path = static/live2d
-	url = git@github.com:stevenjoezhang/live2d-widget.git
+	url = https://github.com/stevenjoezhang/live2d-widget.git
