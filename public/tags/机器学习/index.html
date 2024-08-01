@@ -146,92 +146,6 @@
 
 
     
-    <script src="APlayer/APlayer.min.js"></script>
-    <link rel="stylesheet" href="APlayer/APlayer.min.css">
-    <div id="aplayer" style="opacity:0.8;color: var(--tw-prose-headings);"></div>
-    <script>
-        const ap = new APlayer({
-            container: document.getElementById('aplayer'),
-            fixed: true,
-            audio: [{
-                name: 'Florence',
-                artist: 'Kevin Penkin',
-                url: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722497858451/01 - Florence.mp3', 
-                cover: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722337229573/Florence.png'
-            },{
-                name: 'Adult Life',
-                artist: 'Kevin Penkin',
-                url: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722497860116/02 - Adult Life.mp3', 
-                cover: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722337229573/Florence.png'
-            },{
-                name: 'Memories',
-                artist: 'Kevin Penkin',
-                url: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722497861604/03 - Memories.mp3', 
-                cover: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722337229573/Florence.png'
-            },{
-                name: 'Music',
-                artist: 'Kevin Penkin',
-                url: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722497862445/04 - Music.mp3', 
-                cover: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722337229573/Florence.png'
-            },{
-                name: 'Crash',
-                artist: 'Kevin Penkin',
-                url: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722497864468/05 - Crash.mp3', 
-                cover: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722337229573/Florence.png'
-            },{
-                name: 'First Dates',
-                artist: 'Kevin Penkin',
-                url: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722497869780/06 - First Dates.mp3', 
-                cover: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722337229573/Florence.png'
-            },{
-                name: 'Dreams',
-                artist: 'Kevin Penkin',
-                url: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722497872890/07 - Dreams.mp3', 
-                cover: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722337229573/Florence.png'
-            },]
-        });
-        ready();
-    
-        isRecover = false;
-        function ready(){
-            ap.on('canplay', function () {
-                if(!isRecover){
-                    if(localStorage.getItem("musicIndex") != null){
-                        musicIndex = localStorage.getItem("musicIndex");
-                        musicTime = localStorage.getItem("musicTime");
-                        if(ap.list.index != musicIndex){
-                            ap.list.switch(musicIndex);
-                        }else{
-                            ap.seek(musicTime);
-                            ap.play();
-                            localStorage.clear();
-                            ap.setAttribute(muted,'');
-                            ap.setAttribute(playsinline,'');
-                            isRecover = true;
-                        }
-                    }else{
-                        isRecover = true;
-                    }
-                }
-            });
-        }
-
-        window.onbeforeunload = function(event) {
-            if(!ap.audio.paused){
-                musicIndex = ap.list.index;
-                musicTime = ap.audio.currentTime;
-                localStorage.setItem("musicIndex",musicIndex);
-                localStorage.setItem("musicTime",musicTime);
-            }
-        };
-
-
-
-        var element = document.getElementsByClassName("aplayer-title")[0];  
-        $(element).wrap("<a href=' /radio/pick/'></a>");
-    </script>
-
-    
 
     
     
@@ -555,6 +469,24 @@
             </div>
         </label>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+    <meting-js 
+        server="netease" 
+        type="playlist" 
+        id="3083910462"
+        fixed="true" 
+        autoplay="false"
+        loop="all"
+        order="list"
+        preload="auto"
+        list-folded="ture"
+        list-max-height="500px"
+        lrc-type="1"> 
+    </meting-js>
 </div>
 
 
