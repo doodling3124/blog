@@ -1,6 +1,6 @@
 global:
   language: "简体中文"
-
+pathAppendix: " "
 article:
   anchor_label: "锚点"
   date: "{{ .Date }}"
@@ -62,3 +62,4 @@ shortcode:
 
 recent:
   show_more: "显示更多"
+rss: "由于RSS阅读器无法完美地展示博客内容，建议到浏览器阅读。"

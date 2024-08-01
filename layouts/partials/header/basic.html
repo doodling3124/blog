@@ -19,7 +19,7 @@
     <!-- 音乐播放器 -->
     <script src="APlayer/APlayer.min.js"></script>
     <link rel="stylesheet" href="APlayer/APlayer.min.css">
-    <div id="aplayer"></div>
+    <div id="aplayer" style="opacity:0.8;color: var(--tw-prose-headings);"></div>
     <script>
         const ap = new APlayer({
             container: document.getElementById('aplayer'),
@@ -61,6 +61,45 @@
                 cover: 'https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1722337229573/Florence.png'
             },]
         });
+        ready();
+    
+        isRecover = false;
+        function ready(){
+            ap.on('canplay', function () {
+                if(!isRecover){
+                    if(localStorage.getItem("musicIndex") != null){
+                        musicIndex = localStorage.getItem("musicIndex");
+                        musicTime = localStorage.getItem("musicTime");
+                        if(ap.list.index != musicIndex){
+                            ap.list.switch(musicIndex);
+                        }else{
+                            ap.seek(musicTime);
+                            ap.play();
+                            localStorage.clear();
+                            ap.setAttribute(muted,'');
+                            ap.setAttribute(playsinline,'');
+                            isRecover = true;
+                        }
+                    }else{
+                        isRecover = true;
+                    }
+                }
+            });
+        }
+
+        window.onbeforeunload = function(event) {
+            if(!ap.audio.paused){
+                musicIndex = ap.list.index;
+                musicTime = ap.audio.currentTime;
+                localStorage.setItem("musicIndex",musicIndex);
+                localStorage.setItem("musicTime",musicTime);
+            }
+        };
+
+
+
+        var element = document.getElementsByClassName("aplayer-title")[0];  
+        $(element).wrap("<a href='{{i18n "pathAppendix"}}/radio/pick/'></a>");
     </script>
 
     <!-- live2d模型 -->
