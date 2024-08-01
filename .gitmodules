@@ -2,6 +2,3 @@
 	path = themes/blowfish
 	url = https://github.com/nunocoracao/blowfish.git
 	branch = main
-[submodule "static/live2d"]
-	path = static/live2d
-	url = https://github.com/stevenjoezhang/live2d-widget.git
