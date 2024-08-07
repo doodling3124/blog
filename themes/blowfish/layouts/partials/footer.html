@@ -1,4 +1,53 @@
 <footer id="site-footer" class="py-10 print:hidden">
+  <!-- 音乐播放器 -->
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" rel="stylesheet">
+  <!-- MetingJS -->
+  <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+  <meting-js server="netease" type="playlist" id="3083910462" fixed="true" autoplay="false" loop="all" order="list"
+    preload="auto" list-folded="ture" list-max-height="500px" lrc-type="1" mutex="true">
+  </meting-js>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.pjax.js"></script>
+  <script>
+    var pjax = new Pjax({ selectors: ["#main-content"] }); 
+    window.addEventListener("load", e => { }); 
+    function initPjaxFilterLink() { 
+      document.querySelectorAll("a").forEach(
+        e => { 
+          e.addEventListener("click", t => { var s, n = e.href; console.info(n), s = /funs|notepad|friends/, console.info(pjaxUrlFilter(n, s)), pjaxUrlFilter(n, s) && (t.preventDefault(), window.open(n)) }) 
+        }
+      ) 
+    } 
+    function pjaxUrlFilter(e, t) { 
+      return t.test(e) 
+    } 
+    document.addEventListener(
+      "pjax:send", function () { console.log("pjax:send") }
+    ), 
+    document.addEventListener(
+      "pjax:complete", function () { console.log("pjax:complete"), pjax_reload() }
+    ); 
+    function pjax_reload() { 
+      pjax_js_reload("/js/theme.min.js"), initCustomALink() 
+    } 
+    function pjax_js_reload(e) {
+      var n, s = document.createElement("script"), o = window.location.protocol.split(":")[0]; s.src = e, n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(s, n) 
+    }
+  </script>
+
+  <!-- <script>
+    $(function () {
+      $(document).pjax('a', '#main-content', { fragment: '#main-content', timeout: 6000 });
+      $(document).on('pjax:send', function () {
+        $('#container').fadeTo(700, 0.0);
+      });
+      $(document).on('pjax:complete', function () {
+        $('#container').fadeTo(700, 1);
+      });
+    });
+  </script> -->
+
   {{/* Footer menu */}}
   {{ if .Site.Params.footer.showMenu | default true }}
   {{ if .Site.Menus.footer }}
@@ -40,9 +89,10 @@
     {{/* Theme attribution */}}
     {{ if .Site.Params.footer.showThemeAttribution | default true }}
     <p class="text-xs text-neutral-500 dark:text-neutral-400">
-      {{ `powered by <a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' 
-      href='https://gohugo.io/' target='_blank' rel='noopener noreferrer'>Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
-      href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      {{ `powered by <a class='hover:underline hover:decoration-primary-400 hover:text-primary-500'
+        href='https://gohugo.io/' target='_blank' rel='noopener noreferrer'>Hugo</a> &amp; <a
+        class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://blowfish.page/"
+        target="_blank" rel="noopener noreferrer">Blowfish</a>
     </p>` | safeHTML}}
     {{ end }}
 

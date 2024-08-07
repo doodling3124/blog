@@ -19,9 +19,9 @@
   {{ if templates.Exists $header }}
   {{ partial $header . }}
   {{ else }}
-  {{ partialCached "partials/header/basic.html" . }}
+  {{ partial "partials/header/basic.html" . }}
   {{ end }}
-  <div class="relative flex flex-col grow">
+  <div id="prime_body" class="relative flex flex-col grow">
     <main id="main-content" class="grow">
       {{ block "main" . }}{{ end }}
       {{ if and (.Site.Params.footer.showScrollToTop | default true) (gt .WordCount 1) }}

@@ -1,4 +1,4 @@
-<div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+<div id="menu" style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
     class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
     {{ if .Site.Params.Logo }}
     {{ $logo := resources.Get .Site.Params.Logo }}
@@ -160,28 +160,10 @@
             </div>
         </label>
     </div>
-    <!-- 音乐播放器 -->
-    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" rel="stylesheet">
-    <!-- MetingJS -->
-    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
-    <meting-js 
-        server="netease" 
-        type="playlist" 
-        id="3083910462"
-        fixed="true" 
-        autoplay="false"
-        loop="all"
-        order="list"
-        preload="auto"
-        list-folded="ture"
-        list-max-height="500px"
-        lrc-type="1"> 
-    </meting-js>
 </div>
 
 {{ if .Site.Menus.subnavigation }}
-<div class="main-menu flex pb-3 flex-col items-end justify-between md:justify-start space-x-3" {{ if .Site.Params.Logo
+<div id="subnavigation" class="main-menu flex pb-3 flex-col items-end justify-between md:justify-start space-x-3" {{ if .Site.Params.Logo
     }} style="margin-top:-15px" {{ end }}>
     <div class="hidden md:flex items-center space-x-5">
         {{ range .Site.Menus.subnavigation }}
